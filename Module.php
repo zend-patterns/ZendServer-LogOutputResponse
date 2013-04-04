@@ -21,7 +21,7 @@ class Module
         // application
         $eventManager        = $e->getApplication()->getEventManager(); /* @var $eventManager EventManager */
         $eventManager->attach(MvcEvent::EVENT_FINISH, function(MvcEvent $e){
-        	Log::debug(print_r($e->getResponse()->getContent()));
+        	Log::debug(print_r($e->getResponse()->getContent(), true));
         });
     }
 }
